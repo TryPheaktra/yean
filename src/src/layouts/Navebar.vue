@@ -23,7 +23,40 @@
         >
 
           <!-- Logo -->
-          <img src="../assets/logo1.png" class="w-36 mt-3 ml-4" />
+          <!-- <img src="../assets/logocar2.png" class="w-36 ml-4" /> -->
+          <!-- <div class=" w-56  pl-6 p-1 rounded-full shadow-yellow-500 shadow-2xl">
+            <h1 class="text-3xl font-bold text-white">
+              CAMBODIA<span class="text-yellow-600">|</span>
+            </h1>
+            <p class="text-xs text-gray-500 uppercase">
+              PRIVATETRANSPORT
+            </p>
+          </div> -->
+          <div class="flex items-center justify-center ">
+            <div class="relative group">
+              <!-- <div class="absolute -inset-1 bg-yellow-500 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div> -->
+              
+              <div class="relative w-50 h-14 bg-yellow-400p-[2px] ">
+                <div class="flex flex-col items-center justify-center w-full h-full rounded-l-full  bg-yellow-400  border-yellow-300">
+                  
+                  <h1 class="text-2xl font-black text-white tracking-tighter flex items-center leading-none">
+                    CAMBODIA
+                    <span class="mx-1 text-white opacity-150 font-light">|</span>
+                    <div class="flex flex-col space-y-[2px]">
+                      <div class="w-2 h-1 bg-white opacity-50"></div>
+                      <div class="w-2 h-1 bg-white"></div>
+                      <div class="w-2 h-1 bg-white opacity-50"></div>
+                    </div>
+                  </h1>
+                  
+                  <p class="text-[10px] font-bold text-white tracking-[0.2em] uppercase mt-1 opacity-90">
+                    Private Transport
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-4  backdrop-blur 
@@ -65,13 +98,38 @@
     <!-- Mobile Drawer -->
     <Drawer v-model:visible="drawerVisible" position="right" class="md:hidden bg-yellow-400!">
       <template #header>
-        <div class="flex items-center justify-between h-14 rounded-full  w-40 bg-cover bg-center shadow-lg">
+        <div class="flex items-center justify-between h-14 rounded-full w-50  bg-center shadow-lg">
           <!-- <h2 class="text-2xl font-bold">
             CAR<span class="text-yellow-400">|</span>RENTAL
           </h2>
           <p class="text-xs text-gray-500 uppercase">Menu</p> -->
           <!-- Logo -->
-          <img src="../assets/logo1.png" class="w-36 mt-5 justify-center items-center" />
+          <!-- <img src="../assets/logo1.png" class="w-36 mt-5 justify-center items-center" /> -->
+           <div class="flex items-center justify-center ">
+            <div class="relative group">
+              <!-- <div class="absolute -inset-1 bg-yellow-500 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div> -->
+              
+              <div class="relative w-50 h-14 bg-yellow-400p-[2px] ">
+                <div class="flex flex-col items-center justify-center w-full h-full rounded-full  bg-yellow-400  border-yellow-300">
+                  
+                  <h1 class="text-2xl font-black text-white tracking-tighter flex items-center leading-none">
+                    CAMBODIA
+                    <span class="mx-1 text-white opacity-150 font-light">|</span>
+                    <div class="flex flex-col space-y-[2px]">
+                      <div class="w-2 h-1 bg-white opacity-50"></div>
+                      <div class="w-2 h-1 bg-white"></div>
+                      <div class="w-2 h-1 bg-white opacity-50"></div>
+                    </div>
+                  </h1>
+                  
+                  <p class="text-[10px] font-bold text-white tracking-[0.2em] uppercase mt-1 opacity-90">
+                    Private Transport
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </template>
 

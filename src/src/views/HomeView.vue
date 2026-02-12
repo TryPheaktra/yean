@@ -10,6 +10,9 @@ import CarDetailView from './CarDetailView.vue'
 import { useI18n } from 'vue-i18n';
 import { useToast } from 'primevue/usetoast'
 import Toast from 'primevue/toast'
+import bus25 from '../assets/bus-r.png'
+import suv from '../assets/suv-r.png'
+import starex from '../assets/starex-r.png'
 // Form data
 const selectedCarType = ref<string | null>(null)
 const username = ref('')
@@ -84,10 +87,10 @@ const carTypes = computed<CarType[]>(() =>[
 const currentSlide = ref(0)
 const isAnimating = ref(false)
 const cars = ref([
-  { name: 'Honda', price: 28, image: 'https://www.honda.com.pk/images/2025/civic-standard/civic-standard-main-1.webp' },
-  { name: 'BMW', price: 35, image: 'https://crdms.images.consumerreports.org/c_lfill,w_480,q_auto,f_auto/prod/cars/cr/car-versions/27703-2024-bmw-5-series-530i' },
+  { name: 'SUV', price: 28, image: suv},
+  { name: 'STAREX', price: 35, image: starex },
   { name: 'Honda', price: 32, image: 'https://vehicle-images.dealerinspire.com/ab51-110007812/thumbnails/large/2HGFE2F26TH548229/f1b4f4b1ac07dabafd839fa1b314ddc4.png' },
-  { name: 'BMW', price: 32, image: 'https://stock.bmw.co.uk/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTI5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--6f6ccdc588459b2d119eb8975d10453842141ea7/cosySec-G26-I4MF-WHITE.png' }
+  { name: 'BUS25', price: 32, image: bus25 }
 ])
 
 // 🎵 Thank you sound
@@ -738,7 +741,7 @@ onMounted(() => {
     </section>
     <h1 class="text-center text-3xl mb-5 font-extrabold text-white">Map</h1>
     <div class=" flex items-center justify-center">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24376.131197841325!2d103.8593696610689!3d13.357157145555059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1skm!2skh!4v1770230383524!5m2!1skm!2skh" width="90%" height="450" style="border:0; border-radius: 15px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24376.131197841325!2d103.8593696610689!3d13.357157145555059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1skm!2skh!4v1770230383524!5m2!1skm!2skh" width="81%" height="450" style="border:0; border-radius: 15px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <section id="contact">

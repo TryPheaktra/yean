@@ -107,83 +107,8 @@
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-30 items-center">
-      <!-- Right Image -->
-      <div class="relative">
-        <img
-          src="https://images.unsplash.com/photo-1502877338535-766e1452684a"
-          alt="Premium Car"
-          class="w-full h-[420px] object-cover rounded-xl"
-        />
-
-        <!-- Decorative star -->
-        <div
-          class="absolute top-1/3 -left-6 text-yellow-400 text-3xl rotate-12"
-        >
-          ✳
-        </div>
-      </div>
-      <!-- Left Content -->
-      <div>
-        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight text-white">
-          PREMIUM CAR <br />
-          RENTAL
-        </h1>
-
-        <p class="mt-6 text-yellow-100 max-w-md">
-          Selected Car Service is ready to help with service and repairs of
-          exclusive modern and classic cars. With our workshop for exclusive
-          cars, we have the opportunity to provide the best service for your car
-          in a separate specialist workshop.
-        </p>
-
-        <!-- <button
-          class="mt-8 inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
-        >
-          See all our Cars
-        </button> -->
-      </div>
-
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-30 items-center">
-      
-      <!-- Left Content -->
-      <div>
-        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight text-white">
-          PREMIUM CAR <br />
-          RENTAL
-        </h1>
-
-        <p class="mt-6 text-yellow-100 max-w-md">
-          Selected Car Service is ready to help with service and repairs of
-          exclusive modern and classic cars. With our workshop for exclusive
-          cars, we have the opportunity to provide the best service for your car
-          in a separate specialist workshop.
-        </p>
-
-        <!-- <button
-          class="mt-8 inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
-        >
-          See all our Cars
-        </button> -->
-      </div>
-      <!-- Right Image -->
-      <div class="relative">
-        <img
-          src="https://images.unsplash.com/photo-1502877338535-766e1452684a"
-          alt="Premium Car"
-          class="w-full h-[420px] object-cover rounded-xl"
-        />
-
-        <!-- Decorative star -->
-        <div
-          class="absolute top-1/3 -left-6 text-yellow-400 text-3xl rotate-12"
-        >
-          ✳
-        </div>
-      </div>
-
-    </div>
+    
+    
 
     <!-- Dialog -->
     <Dialog

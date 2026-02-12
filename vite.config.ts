@@ -17,8 +17,13 @@ export default defineConfig({
       resolvers: [
         PrimeVueResolver()
       ]
-    })
+    }),
+    
   ],
+  build: {
+      outDir: 'my-custom-dist', // Change 'my-custom-dist' to your desired folder name
+      emptyOutDir: true, // Optional: ensures the directory is cleaned before each build
+    },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
