@@ -181,21 +181,21 @@ const { t ,locale} = useI18n({ useScope: 'global' })
 
 
 const categories = computed<Category[]>(() => [
-  {
-    label: t('cardetail.label.hotel.label'),
-    image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/641151494.jpg?k=74ea667970853565b0503bd675936738d08f067267387672c2f6bd32d1a5f0e7&o=',
-    description: t('cardetail.label.hotel.description'),
-    features: [
-      t('cardetail.label.hotel.features.a'),
-      t('cardetail.label.hotel.features.b'),
-      t('cardetail.label.hotel.features.c'),
-      t('cardetail.label.hotel.features.d'),
-      t('cardetail.label.hotel.features.e'),
-      t('cardetail.label.hotel.features.f'),
-      t('cardetail.label.hotel.features.g'),
-      t('cardetail.label.hotel.features.h'),
-    ]
-  },
+  // {
+  //   label: t('cardetail.label.hotel.label'),
+  //   image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/641151494.jpg?k=74ea667970853565b0503bd675936738d08f067267387672c2f6bd32d1a5f0e7&o=',
+  //   description: t('cardetail.label.hotel.description'),
+  //   features: [
+  //     t('cardetail.label.hotel.features.a'),
+  //     t('cardetail.label.hotel.features.b'),
+  //     t('cardetail.label.hotel.features.c'),
+  //     t('cardetail.label.hotel.features.d'),
+  //     t('cardetail.label.hotel.features.e'),
+  //     t('cardetail.label.hotel.features.f'),
+  //     t('cardetail.label.hotel.features.g'),
+  //     t('cardetail.label.hotel.features.h'),
+  //   ]
+  // },
   {
     label: t('cardetail.label.suvs.label'),
     image: suv,
