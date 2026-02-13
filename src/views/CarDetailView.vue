@@ -36,40 +36,9 @@
         </div>
       </div>
     </div>
+    <div class="mt-20 "></div>
 
-    <!-- Stats -->
-    <div
-      ref="statsRef"
-      class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
-    >
-      <div>
-        <h2 class="text-3xl font-bold text-white">
-          {{ formatNumber(capital) }}M+
-        </h2>
-        <p class="text-yellow-100 mt-2">{{ t('stats.total') }}</p>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-white">
-          {{ formatNumber(customers) }}M+
-        </h2>
-        <p class="text-yellow-100 mt-2">{{ t('stats.happy') }}</p>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-white">
-          {{ feedback }}
-        </h2>
-        <p class="text-yellow-100 mt-2">{{ t('stats.feed') }}</p>
-      </div>
-    </div>
-
-
-    <!-- Title -->
-    <h2 class="text-3xl md:text-4xl font-extrabold text-white text-center mb-12">
-      {{ t('stats.title.w') }} <br class="hidden md:block" />
-      {{ t('stats.title.v') }}
-    </h2>
+    
 
     <!-- Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -107,6 +76,39 @@
         </div>
       </div>
     </div>
+    <!-- Stats -->
+    <div
+      ref="statsRef"
+      class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
+    >
+      <div>
+        <h2 class="text-3xl font-bold text-white">
+          {{ formatNumber(capital) }}M+
+        </h2>
+        <p class="text-yellow-100 mt-2">{{ t('stats.total') }}</p>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-white">
+          {{ formatNumber(customers) }}M+
+        </h2>
+        <p class="text-yellow-100 mt-2">{{ t('stats.happy') }}</p>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-white">
+          {{ feedback }}
+        </h2>
+        <p class="text-yellow-100 mt-2">{{ t('stats.feed') }}</p>
+      </div>
+    </div>
+
+
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white text-center mb-12">
+      {{ t('stats.title.w') }} <br class="hidden md:block" />
+      {{ t('stats.title.v') }}
+    </h2>
     
     
 
