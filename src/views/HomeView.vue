@@ -148,15 +148,15 @@ const handleSubmit = async () => {
     });
     return;
   }
-//   if (!turnstileToken.value) {
-//   toast.add({
-//     severity: 'warn',
-//     summary: 'Verification required',
-//     detail: 'Please verify you are human',
-//     life: 3000
-//   })
-//   return
-// }
+  if (!turnstileToken.value) {
+  toast.add({
+    severity: 'warn',
+    summary: 'Verification required',
+    detail: 'Please verify you are human',
+    life: 3000
+  })
+  return
+}
 
   if (!username.value.trim()) {
     toast.add({ 
@@ -212,66 +212,37 @@ const handleSubmit = async () => {
     });
   };
 
-  // Get Car Type Label with fallback
-  let selectedCarLabel = '—';
-  if (selectedCarType.value && carTypes.value.length > 0) {
-    const foundCarType = carTypes.value.find(item => item.value === selectedCarType.value);
-    selectedCarLabel = foundCarType?.label || selectedCarType.value;
+    // -----------------------------
+  // 3️⃣ Build payload
+  // -----------------------------
+  const payload = {
+    token: turnstileToken.value,
+    username: username.value,
+    hotelname: hotelname.value,
+    phone: phone.value,
+    selectedCarType: selectedCarType.value || '',
+    pickupDate: pickupDate.value ? formatDate(pickupDate.value) : '',
+    pickupTime: templatedisplay.value ? formatTime(templatedisplay.value) : ''
   }
 
-  // Debug: Log all values
-  // console.log('Form Data:', {
-  //   username: username.value,
-  //   hotelanme: hotelname.value,
-  //   phone: phone.value,
-  //   selectedCarType: selectedCarType.value,
-  //   selectedCarLabel: selectedCarLabel,
-  //   pickupLocation: pickupLocation.value,
-  //   pickupDate: pickupDate.value,
-  //   pickupTime: formatTime(templatedisplay.value)
-  // });
+  // -----------------------------
+  // 4️⃣ Send to Cloudflare Worker
+  // -----------------------------
+  const WORKER_URL = 'https://yent-contact.fiveword2.workers.dev' // your deployed Worker
 
-  // Build message
-  const message = `
-  🚗 *New Car Reservation Request*
-
-  👤 Full Name: ${username.value || '—'}
-
-  📍 Pick-up Location: ${hotelname.value || '—'}
-
-  📞 Phone: ${phone.value || '—'}
-
-  🚘 Car Type: ${selectedCarLabel}
-
-
-  📅 Date: ${formatDate(pickupDate.value)}
-
-  ⏰ Time: ${formatTime(templatedisplay.value)}
-    `.trim();
-
-  // Telegram config
-  const TELEGRAM_BOT_TOKEN = '7780016525:AAEOWPwkhjBtwWMPFxfoMFodDKcb_eQHFco';
-  const TELEGRAM_CHAT_ID = '-5100444724';
-
-  const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
   try {
-    const response = await fetch(telegramUrl, {
+    const res = await fetch(WORKER_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        chat_id: TELEGRAM_CHAT_ID,
-        text: message,
-        parse_mode: 'Markdown'
-      })
-    });
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
 
-    const responseData = await response.json();
+    const data = await res.json()
+
     // console.log('Telegram Response:', responseData);
 
-    if (response.ok) {
+    if (res.ok && data.success) {
       // ✅ Show success toast
       // toast.add({ 
       //   severity: 'success', 
@@ -300,13 +271,7 @@ const handleSubmit = async () => {
       templatedisplay.value = null;
       // templatedisplay1.value = null;
     } else {
-      console.error('Telegram API error:', responseData);
-      toast.add({ 
-        severity: 'error', 
-        summary: '❌ Error', 
-        detail: `Failed to send: ${responseData.description || 'Unknown error'}`, 
-        life: 5000 
-      });
+      toast.add({ severity: 'error', summary: 'Error', detail: `Failed to send: ${data.error || 'Unknown error'}`, life: 5000 })
     }
   } catch (error) {
     console.error('Network error:', error);
