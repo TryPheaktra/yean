@@ -7,7 +7,7 @@
         <div class="flex items-center justify-between h-6">
           <div class="flex items-center space-x-2 text-sm text-gray-700">
             <i class="pi pi-phone text-gray-600"></i>
-            <span class="font-medium">CONTACT: (562) 498-4600</span>
+            <span class="font-medium">CONTACT: (+855) 11 944 244</span>
           </div>
         </div>
       </div>
@@ -145,18 +145,18 @@
         </a>
         <Divider/>
         <div class="px-4 py-3 text-sm text-white ">
-          <i class="pi pi-phone mr-2"></i>(562) 498-4600
+          <i class="pi pi-phone mr-2"></i>(+855) 11 944 244
         </div>
         <div class="px-4 py-3 text-sm text-gray-700">
-          <a href="https://www.facebook.com/share/1892q4SgGk/?mibextid=wwXIfr" class="text-white"><i class="pi pi-facebook mr-2"></i>YEAN TRANSPORT</a>
+          <a href="https://web.facebook.com/profile.php?id=61586673639304" class="text-white"><i class="pi pi-facebook mr-2"></i>Cambodia private transport</a>
         </div>
         <div class="px-4 py-3 text-sm text-gray-700">
           <!-- <i class="pi pi-instagram mr-2"></i>(562) 498-4600 -->
-          <a href="https://www.facebook.com/share/1892q4SgGk/?mibextid=wwXIfr" class="text-white"><i class="pi pi-instagram mr-2"></i>YEAN TRANSPORT</a>
+          <i class="pi pi-envelope mr-2 text-white"></i><span class="text-white">mechyean17@gmail.com</span>
         </div>
         <div class="px-4 py-3 text-sm text-gray-700">
           <!-- <i class="pi pi-telegram mr-2"></i>(562) 498-4600 -->
-          <a href="https://www.facebook.com/share/1892q4SgGk/?mibextid=wwXIfr" class="text-white"><i class="pi pi-telegram mr-2"></i>YEAN TRANSPORT</a>
+          <a href="https://t.me/+85511944244" class="text-white"><i class="pi pi-telegram mr-2"></i>YEAN TRANSPORT</a>
         </div>
       </div>
     </Drawer>
@@ -294,6 +294,7 @@ const activeSection = ref('#home')
 
 const navItems = computed(() => [
   { label: t('nav.home'), to: '#home' },
+  { label: t('nav.about'), to: '#about' },
   { label: t('nav.vehicles'), to: '#vehicles' },
   { label: t('nav.contact'), to: '#contact' }
 ])

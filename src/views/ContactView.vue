@@ -1,6 +1,7 @@
 <template>
   <div class=" bg-gradient-to-r from-yellow-400! to-yellow-500! py-16 px-4">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
+      
       <!-- Page Title -->
       <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">{{ t('contact.header') }}</h1>
 
@@ -51,31 +52,31 @@
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
             <i class="pi pi-map-marker text-yellow-400 text-xl"></i>
-            <p class="text-gray-700">123 Main Street, City, Country</p>
+            <p class="text-gray-700">Cambodia , Siem Reap, Cambodia, 1701</p>
           </div>
 
           <div class="flex items-center space-x-3">
             <i class="pi pi-phone text-yellow-400 text-xl"></i>
-            <p class="text-gray-700">+1 (562) 498-4600</p>
+            <p class="text-gray-700">+855 11 944 244</p>
           </div>
 
           <div class="flex items-center space-x-3">
             <i class="pi pi-envelope text-yellow-400 text-xl"></i>
-            <p class="text-gray-700">info@carrental.com</p>
+            <p class="text-gray-700">mechyean17@gmail.com</p>
           </div>
 
           <div>
             <h3 class="text-gray-800 font-medium mt-4">Follow us</h3>
             <div class="flex space-x-4 mt-2">
-              <a href="#" class="text-gray-500 hover:text-yellow-400">
+              <a href="https://web.facebook.com/profile.php?id=61586673639304" class="text-gray-500 hover:text-yellow-400">
                 <i class="pi pi-facebook text-2xl"></i>
               </a>
-              <a href="#" class="text-gray-500 hover:text-yellow-400">
-                <i class="pi pi-twitter text-2xl"></i>
+              <a href="https://t.me/+85511944244" class="text-gray-500 hover:text-yellow-400">
+                <i class="pi pi-telegram text-2xl"></i>
               </a>
-              <a href="#" class="text-gray-500 hover:text-yellow-400">
+              <!-- <a href="#" class="text-gray-500 hover:text-yellow-400">
                 <i class="pi pi-instagram text-2xl"></i>
-              </a>
+              </a> -->
             </div>
           </div>
         </div>

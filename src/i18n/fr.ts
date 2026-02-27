@@ -1,6 +1,9 @@
+
+
 export default {
   nav: {
     home: 'Accueil',
+    about: 'À propos de nous',
     vehicles: 'Véhicules',
     contact: 'Contact'
   },
@@ -75,45 +78,45 @@ export default {
       },
       suvs: {
         label: 'SUV',
-        description: 'Les SUV sont des véhicules polyvalents et puissants, conçus pour offrir confort, sécurité et performance aussi bien en ville que lors de longs trajets. Grâce à leur position de conduite surélevée et à leurs équipements modernes, ils sont idéaux pour les familles, les groupes et les voyageurs.',
-        features: {
-          a: 'Intérieur spacieux avec sièges modulables',
-          b: 'Moteur puissant et économe en carburant',
-          c: 'Adapté à la conduite urbaine, routière et tout-terrain',
-          d: 'Garde au sol élevée pour tous types de terrains',
-          e: 'Systèmes de sécurité avancés',
-          f: 'Suspension confortable pour les longs voyages',
-          g: 'Grande capacité de bagages',
-          h: 'Design moderne avec équipements haut de gamme'
-        }
+        description: 'Les SUV sont des véhicules polyvalents et puissants, conçus pour offrir confort, sécurité et performance aussi bien en ville que sur les longs trajets. Grâce à leur position de conduite surélevée et à leurs équipements de sécurité avancés, les SUV sont idéaux pour les familles, les groupes et les voyageurs en quête de fiabilité et d`élégance. Ils peuvent accueillir jusqu`à quatre passagers.',
+        // features: {
+        //   a: 'Intérieur spacieux avec sièges modulables',
+        //   b: 'Moteur puissant et économe en carburant',
+        //   c: 'Adapté à la conduite urbaine, routière et tout-terrain',
+        //   d: 'Garde au sol élevée pour tous types de terrains',
+        //   e: 'Systèmes de sécurité avancés',
+        //   f: 'Suspension confortable pour les longs voyages',
+        //   g: 'Grande capacité de bagages',
+        //   h: 'Design moderne avec équipements haut de gamme'
+        // }
       },
       vans: {
         label: 'Bus 25seats',
-        description: 'Les Bus 25seats sont des véhicules pratiques et fiables, conçus pour les déplacements en groupe, les transferts aéroport et le transport de marchandises. Grâce à leur grand espace intérieur, ils sont parfaits pour les familles, les groupes touristiques et les besoins professionnels.',
-        features: {
-          a: 'Grand espace intérieur',
-          b: 'Capacité de 8 à 15 passagers',
-          c: 'Moteur diesel puissant',
-          d: 'Sièges confortables pour les longs trajets',
-          e: 'Adapté au transport de passagers et de marchandises',
-          f: 'Idéal pour les excursions, événements et transferts aéroport',
-          g: 'Performance fiable et durable',
-          h: 'Climatisation et équipements de sécurité'
-        }
+        description: 'Les minibus de 25 places sont des véhicules pratiques et fiables, conçus pour les voyages de groupe, les transferts aéroport et le transport touristique. Spacieux et performants, ils sont idéaux pour les familles, les groupes de touristes et les entreprises qui recherchent confort et efficacité.',
+        // features: {
+        //   a: 'Grand espace intérieur',
+        //   b: 'Capacité de 8 à 15 passagers',
+        //   c: 'Moteur diesel puissant',
+        //   d: 'Sièges confortables pour les longs trajets',
+        //   e: 'Adapté au transport de passagers et de marchandises',
+        //   f: 'Idéal pour les excursions, événements et transferts aéroport',
+        //   g: 'Performance fiable et durable',
+        //   h: 'Climatisation et équipements de sécurité'
+        // }
       },
       electric: {
         label: 'Starex',
-        description: 'Les véhicules Starex offrent une expérience de conduite moderne, propre et silencieuse. Grâce à une technologie avancée, ils ne produisent aucune émission et garantissent une conduite fluide, idéale pour les conducteurs soucieux de l’environnement.',
-        features: {
-          a: 'Zéro émission et respectueux de l’environnement',
-          b: 'Conduite silencieuse et fluide',
-          c: 'Recharge rapide',
-          d: 'Coûts d’entretien réduits',
-          e: 'Technologies avancées et fonctionnalités intelligentes',
-          f: 'Parfait pour les trajets urbains et périurbains',
-          g: 'Design moderne et innovant',
-          h: 'Performance énergétique élevée'
-        }
+        description: 'Le Starex offre une expérience de conduite propre, silencieuse et moderne. Grâce à sa technologie de pointe, il assure confort et sérénité aux passagers sur la route. Il peut accueillir jusqu’à six passagers.',
+        // features: {
+        //   a: 'Zéro émission et respectueux de l’environnement',
+        //   b: 'Conduite silencieuse et fluide',
+        //   c: 'Recharge rapide',
+        //   d: 'Coûts d’entretien réduits',
+        //   e: 'Technologies avancées et fonctionnalités intelligentes',
+        //   f: 'Parfait pour les trajets urbains et périurbains',
+        //   g: 'Design moderne et innovant',
+        //   h: 'Performance énergétique élevée'
+        // }
       },
     }
   },
@@ -124,6 +127,23 @@ export default {
   button: 'CONTINUER LA RÉSERVATION DE VOITURE',
   contact:{
     header: 'Contactez-nous'
+  },
+  about: {
+    a1: 'Chauffeurs privés fiables pour les voyageurs solos, les familles et les voyages d\'affaires. Voyagez en toute sécurité et confortablement partout au Cambodge.',
+    ta: 'Voyagez n\'importe où',
+    a2: 'Nous desservons tout le pays, y compris Phnom Penh, Siem Reap, Sihanoukville, Battambang et Kampot. Que ce soit pour de courts trajets en ville ou de longs voyages à travers les provinces, nous nous occupons de tout.',
+    wte: {
+      label: 'À quoi s\'attendre',
+      w1: 'Les conducteurs qui parlent anglais',
+      w2: 'Voitures propres avec climatisation puissante',
+      w3: 'Conduite sûre et prudente',
+      w4: 'Prise en charge flexible selon vos disponibilités',
+      w5: 'Des prix justes, sans frais cachés',
+    },
+    apt: 'Transferts aéroport et visites guidées',
+    skip: 'Évitez la file d\'attente des taxis. Nous proposons des transferts aéroport, des visites de temples, des excursions à la campagne et des trajets confortables entre les villes.',
+    let: 'Dites-nous où vous devez aller — nous nous occupons du reste.',
+    b: ' Réservez votre trajet'
   }
 
   

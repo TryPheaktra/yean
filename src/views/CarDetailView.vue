@@ -23,9 +23,9 @@
       <!-- Right Image -->
       <div class="relative">
         <img
-          src="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+          src="../assets/toyota.jpg"
           alt="Premium Car"
-          class="w-full h-[420px] object-cover rounded-xl"
+          class="w-full h-[520px] object-cover rounded-xl"
         />
 
         <!-- Decorative star -->
@@ -123,7 +123,7 @@
       <div v-if="selectedCategory" class="space-y-4">
         <img
           :src="selectedCategory.image"
-          class="w-full h-48 object-cover rounded-lg"
+          class="w-full h-48  object-cover rounded-lg"
         />
 
         <h3 class="text-2xl font-bold">
@@ -154,9 +154,9 @@ import { computed, onMounted, ref, watch } from 'vue'
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 import { useI18n } from 'vue-i18n'
-import bus25 from '../assets/bus25.webp'
-import suv from '../assets/suv.jpg'
-import starex from '../assets/starex.jpg'
+import bus25 from '../assets/25.jpg'
+import suv from '../assets/toyotaalphard.jpg'
+import starex from '../assets/starag.jpg'
 
 interface Category {
   label: string
@@ -203,14 +203,14 @@ const categories = computed<Category[]>(() => [
     image: suv,
     description: t('cardetail.label.suvs.description'),
     features: [
-      t('cardetail.label.suvs.features.a'),
-      t('cardetail.label.suvs.features.b'),
-      t('cardetail.label.suvs.features.c'),
-      t('cardetail.label.suvs.features.d'),
-      t('cardetail.label.suvs.features.e'),
-      t('cardetail.label.suvs.features.f'),
-      t('cardetail.label.suvs.features.g'),
-      t('cardetail.label.suvs.features.h'),
+      // t('cardetail.label.suvs.features.a'),
+      // t('cardetail.label.suvs.features.b'),
+      // t('cardetail.label.suvs.features.c'),
+      // t('cardetail.label.suvs.features.d'),
+      // t('cardetail.label.suvs.features.e'),
+      // t('cardetail.label.suvs.features.f'),
+      // t('cardetail.label.suvs.features.g'),
+      // t('cardetail.label.suvs.features.h'),
     ]
   },
   {
@@ -218,14 +218,14 @@ const categories = computed<Category[]>(() => [
     image: bus25,
     description: t('cardetail.label.vans.description'),
     features: [
-      t('cardetail.label.vans.features.a'),
-      t('cardetail.label.vans.features.b'),
-      t('cardetail.label.vans.features.c'),
-      t('cardetail.label.vans.features.d'),
-      t('cardetail.label.vans.features.e'),
-      t('cardetail.label.vans.features.f'),
-      t('cardetail.label.vans.features.g'),
-      t('cardetail.label.vans.features.h'),
+      // t('cardetail.label.vans.features.a'),
+      // t('cardetail.label.vans.features.b'),
+      // t('cardetail.label.vans.features.c'),
+      // t('cardetail.label.vans.features.d'),
+      // t('cardetail.label.vans.features.e'),
+      // t('cardetail.label.vans.features.f'),
+      // t('cardetail.label.vans.features.g'),
+      // t('cardetail.label.vans.features.h'),
     ]
   },
   {
@@ -233,14 +233,14 @@ const categories = computed<Category[]>(() => [
     image: starex,
     description: t('cardetail.label.electric.description'),
     features: [
-      t('cardetail.label.electric.features.a'),
-      t('cardetail.label.electric.features.b'),
-      t('cardetail.label.electric.features.c'),
-      t('cardetail.label.electric.features.d'),
-      t('cardetail.label.electric.features.e'),
-      t('cardetail.label.electric.features.f'),
-      t('cardetail.label.electric.features.g'),
-      t('cardetail.label.electric.features.h'),
+      // t('cardetail.label.electric.features.a'),
+      // t('cardetail.label.electric.features.b'),
+      // t('cardetail.label.electric.features.c'),
+      // t('cardetail.label.electric.features.d'),
+      // t('cardetail.label.electric.features.e'),
+      // t('cardetail.label.electric.features.f'),
+      // t('cardetail.label.electric.features.g'),
+      // t('cardetail.label.electric.features.h'),
     ]
   },
 

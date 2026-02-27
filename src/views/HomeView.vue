@@ -10,9 +10,11 @@ import CarDetailView from './CarDetailView.vue'
 import { useI18n } from 'vue-i18n';
 import { useToast } from 'primevue/usetoast'
 import Toast from 'primevue/toast'
-import bus25 from '../assets/bus-r.png'
-import suv from '../assets/suv-r.png'
+import bus25 from '../assets/25seats.png'
+// import suv from '../assets/suv-r.png'
 import starex from '../assets/starex-r.png'
+import alphard from '../assets/Alphard.png'
+import AboutView from './AboutView.vue';
 // Form data
 const selectedCarType = ref<string | null>(null)
 const username = ref('')
@@ -87,9 +89,9 @@ const carTypes = computed<CarType[]>(() =>[
 const currentSlide = ref(0)
 const isAnimating = ref(false)
 const cars = ref([
-  { name: 'SUV', price: 28, image: suv},
+  { name: 'SUV', price: 30, image: alphard},
   { name: 'STAREX', price: 35, image: starex },
-  { name: 'Honda', price: 32, image: 'https://vehicle-images.dealerinspire.com/ab51-110007812/thumbnails/large/2HGFE2F26TH548229/f1b4f4b1ac07dabafd839fa1b314ddc4.png' },
+  // { name: 'Toyota Alphard', price: 32, image: alphard },
   { name: 'BUS25', price: 32, image: bus25 }
 ])
 
@@ -700,6 +702,9 @@ onMounted(() => {
       </div>
       
     </div>
+    <section id="about" class=" py-16">
+      <AboutView />
+    </section>
 
     <section id="vehicles">
       <CarDetailView />

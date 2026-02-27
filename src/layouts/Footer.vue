@@ -37,11 +37,11 @@
 // }
 
 const socialLinks = [
-  { icon: 'pi-facebook', href: '#', color: 'bg-blue-600 hover:bg-blue-700' },
-  { icon: 'pi-twitter', href: '#', color: 'bg-blue-400 hover:bg-blue-500' },
-  { icon: 'pi-instagram', href: '#', color: 'bg-pink-500 hover:bg-pink-600' },
-  { icon: 'pi-linkedin', href: '#', color: 'bg-cyan-500 hover:bg-cyan-600' },
-  { icon: 'pi-youtube', href: '#', color: 'bg-red-500 hover:bg-red-600' }
+  { icon: 'pi-facebook', href: 'https://web.facebook.com/profile.php?id=61586673639304', color: 'bg-blue-600 hover:bg-blue-700' },
+  // { icon: 'pi-twitter', href: '#', color: 'bg-blue-400 hover:bg-blue-500' },
+  // { icon: 'pi-instagram', href: '#', color: 'bg-pink-500 hover:bg-pink-600' },
+  // { icon: 'pi-linkedin', href: '#', color: 'bg-cyan-500 hover:bg-cyan-600' },
+  { icon: 'pi-telegram', href: 'https://t.me/+85511944244', color: 'bg-blue-400 hover:bg-blue-600' }
 ]
 
 // const handleNewsletterSubmit = () => {

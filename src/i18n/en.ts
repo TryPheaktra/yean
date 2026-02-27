@@ -1,10 +1,8 @@
-import { header } from "@primeuix/themes/aura/accordion";
-import { button } from "@primeuix/themes/aura/inputnumber";
-
 
 export default {
   nav: {
     home: 'Home',
+    about: 'About Us',
     vehicles: 'Vehicles',
     contact: 'Contact'
   },
@@ -12,7 +10,7 @@ export default {
     cardisplay:{
       l:'LUXURY CAR FROM',
       d: 'DAY',
-      t: 'Treat yourself in USA'
+      t: 'In Siem Reap Province'
     },
     prem: {
       p:'PREMIUM CAR',
@@ -81,45 +79,45 @@ export default {
       },
       suvs: {
         label: 'SUV',
-        description: 'SUV are versatile and powerful vehicles designed to provide comfort, safety, and performance for both city driving and long-distance journeys. With a high driving position and advanced safety features, SUVs are ideal for families, groups, and travelers seeking reliability and style.',
-        features: {
-          a: 'Spacious interior with flexible seating',
-          b: 'Powerful and fuel-efficient engine',
-          c: 'Suitable for city, highway, and off-road driving',
-          d: 'High ground clearance for all terrains',
-          e: 'Advanced safety systems',
-          f: 'Comfortable suspension for long trips',
-          g: 'Large luggage capacity',
-          h: 'Modern design with premium features'
-        }
+        description: 'SUVs are versatile and powerful vehicles designed to provide comfort, safety, and performance for both city driving and long-distance travel. With a high driving position and advanced safety features, SUVs are ideal for families, groups, and travelers looking for reliability and style. Able to seat up to four passengers',
+        // features: {
+        //   a: 'Spacious interior with flexible seating',
+        //   b: 'Powerful and fuel-efficient engine',
+        //   c: 'Suitable for city, highway, and off-road driving',
+        //   d: 'High ground clearance for all terrains',
+        //   e: 'Advanced safety systems',
+        //   f: 'Comfortable suspension for long trips',
+        //   g: 'Large luggage capacity',
+        //   h: 'Modern design with premium features'
+        // }
       },
       vans: {
         label: 'Bus 25seats',
-        description: 'Bus 25seats are practical and reliable vehicles designed for group travel, airport transfers, and cargo transportation. With generous interior space and strong performance, they are ideal for families, tour groups, and businesses that require comfort and efficiency.',
-        features: {
-          a: 'Large interior space',
-          b: 'Seating capacity from 8 to 15 passengers',
-          c: 'Powerful diesel engine',
-          d: 'Comfortable seating for long-distance travel',
-          e: 'Suitable for passengers and cargo transport',
-          f: 'Ideal for tours, events, and airport transfers',
-          g: 'Reliable performance and durability',
-          h: 'Air conditioning and safety features'
-        }
+        description: '25-seater buses are practical and reliable vehicles designed for group travel, airport transfers and tourist transportation. With spacious interior space and solid performance, they are ideal for families, tour groups and businesses that need comfort and efficiency.',
+        // features: {
+        //   a: 'Large interior space',
+        //   b: 'Seating capacity from 8 to 15 passengers',
+        //   c: 'Powerful diesel engine',
+        //   d: 'Comfortable seating for long-distance travel',
+        //   e: 'Suitable for passengers and cargo transport',
+        //   f: 'Ideal for tours, events, and airport transfers',
+        //   g: 'Reliable performance and durability',
+        //   h: 'Air conditioning and safety features'
+        // }
       },
       electric: {
         label: 'Starex',
-        description: 'Starex vehicles offer a clean, quiet, and modern driving experience. Powered by advanced electric technology, they produce zero emissions while delivering smooth performance, making them ideal for eco-conscious drivers and urban transportation.',
-        features: {
-          a: 'Zero emissions and eco-friendly',
-          b: 'Silent and smooth driving experience',
-          c: 'Fast charging capability',
-          d: 'Low operating and maintenance costs',
-          e: 'Advanced technology and smart features',
-          f: 'Ideal for city and short-to-medium trips',
-          g: 'Modern design and innovation',
-          h: 'Energy-efficient performance'
-        }
+        description: 'The Starex offers a clean, quiet and modern driving experience. Powered by advanced technology, it makes passengers feel comfortable and confident on the road. It can accommodate up to six passengers.',
+        // features: {
+        //   a: 'Zero emissions and eco-friendly',
+        //   b: 'Silent and smooth driving experience',
+        //   c: 'Fast charging capability',
+        //   d: 'Low operating and maintenance costs',
+        //   e: 'Advanced technology and smart features',
+        //   f: 'Ideal for city and short-to-medium trips',
+        //   g: 'Modern design and innovation',
+        //   h: 'Energy-efficient performance'
+        // }
       },
 
     }
@@ -131,6 +129,27 @@ export default {
   button: 'CONTINUE CAR RESERVATION',
   contact:{
     header: 'Contact Us'
+  },
+
+  about: {
+    a1: 'Reliable private drivers for solo travelers, families, and business trips. Travel safely and comfortably anywhere in Cambodia.',
+    ta: 'Travel Anywhere',
+    a2: 'We drive all over the country including Phnom Penh,Siem Reap, Sihanoukville, Battambang, and Kampot. From short city rides to long province trips — we’ve got you covered.',
+    wte: {
+      label: 'What to Expect',
+      w1:'Drivers who speak English',
+      w2:'Clean cars with strong air conditioning',
+      w3:'Safe and careful driving',
+      w4:'Flexible pickup on your schedule',
+      w5:'Fair prices — no hidden fees',
+    },
+    apt: 'Airport Pickups & Tours',
+    skip: 'Skip the taxi line. We provide airport pickups, temple tours, countryside trips, and comfortable travel between cities.',
+    let: 'Let us know where you need to go — we’ll take care of the rest.',
+    b: ' Book Your Ride'
+
   }
 
 }
+
+
