@@ -55,6 +55,7 @@ const isFormVisible = ref(false)
 const isHeroTextVisible = ref(false)
 const isCarVisible = ref(false)
 const showDialog = ref(false)
+const isSubmitting = ref(false)
 
 const sectionRefs = ref<HTMLElement[]>([])
 const visibleSections = ref<boolean[]>([])
@@ -140,6 +141,7 @@ const prevSlide = () => {
 //   return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 // };
 const handleSubmit = async () => {
+  if (isSubmitting.value) return
   // ✅ Validation: Check required fields
   if (!selectedCarType.value) {
     toast.add({ 
@@ -232,6 +234,8 @@ const handleSubmit = async () => {
   // -----------------------------
   const WORKER_URL = 'https://yent-contact.fiveword2.workers.dev' // your deployed Worker
 
+    // ✅ Start loading
+  isSubmitting.value = true
 
   try {
     const res = await fetch(WORKER_URL, {
@@ -283,6 +287,8 @@ const handleSubmit = async () => {
       detail: 'Please check your connection and try again.', 
       life: 5000 
     });
+  } finally {
+    isSubmitting.value = false
   }
 };
 
@@ -604,8 +610,9 @@ onMounted(() => {
                 <!-- Submit Button -->
                 <Button
                   type="submit"
-                  :disabled="!turnstileToken"
-                  :label="t('button')"
+                  :disabled="!turnstileToken || isSubmitting"
+                  :loading="isSubmitting"
+                  :label="isSubmitting ? 'Sending...' : t('button')"
                   class="w-full submit-button bg-yellow-400! hover:bg-yellow-500! text-gray-800 font-bold py-4 border-0! uppercase tracking-wide shadow-lg"
                 />
               </form>
