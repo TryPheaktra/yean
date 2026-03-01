@@ -104,7 +104,7 @@ onUnmounted(() => {
           <!-- Image -->
           <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="../assets/incar.jpg"
+              src="/public/incar.jpg"
               alt="Car Interior"
               preview
               imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
@@ -116,7 +116,7 @@ onUnmounted(() => {
           <!-- Image -->
           <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="../assets/incar1.jpg"
+              src="/public/incar1.jpg"
               alt="Car Interior"
               preview
               imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
