@@ -12,7 +12,7 @@ import { useToast } from 'primevue/usetoast'
 import Toast from 'primevue/toast'
 import bus25 from '../assets/25seats.png'
 // import suv from '../assets/suv-r.png'
-import starex from '../assets/starex-r.png'
+import starex from '../assets/starag1.png'
 import alphard from '../assets/Alphard.png'
 import AboutView from './AboutView.vue';
 // Form data
@@ -216,6 +216,7 @@ const handleSubmit = async () => {
     });
   };
 
+  const formattedPhone = '+855' + phone.value.replace(/\s/g, '')
     // -----------------------------
   // 3️⃣ Build payload
   // -----------------------------
@@ -223,7 +224,7 @@ const handleSubmit = async () => {
     token: turnstileToken.value,
     username: username.value,
     hotelname: hotelname.value,
-    phone: phone.value,
+    phone: formattedPhone,
     selectedCarType: selectedCarType.value || '',
     pickupDate: pickupDate.value ? formatDate(pickupDate.value) : '',
     pickupTime: templatedisplay.value ? formatTime(templatedisplay.value) : ''
@@ -499,12 +500,12 @@ onMounted(() => {
                 <div class="form-field">
                   <InputGroup>
                     <InputGroupAddon class="bg-slate-200! w-35 addon-animated">
-                      <i class="pi pi-phone text-black"> Phone</i>
+                      <i class="pi pi-phone text-black"> +855</i>
                     </InputGroupAddon>
                     <InputMask 
                       ref="pickupInput"
                       v-model="phone" 
-                      mask="(999) 999-9999" placeholder="(+855) 999-9999" fluid
+                      mask="99 999 999" placeholder="(+855) 999-9999" fluid
                     />
                   </InputGroup>
                 </div>
