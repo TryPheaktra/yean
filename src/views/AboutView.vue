@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import Image from 'primevue/image'
 
 const { t } = useI18n({ useScope: 'global' })
 
