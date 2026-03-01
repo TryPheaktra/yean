@@ -121,9 +121,12 @@
       class="rounded-xl"
     >
       <div v-if="selectedCategory" class="space-y-4">
-        <img
+        <Image
           :src="selectedCategory.image"
-          class="w-full h-48  object-cover rounded-lg"
+          alt="Car Image"
+          preview
+          imageClass="w-full h-48 object-cover rounded-lg shadow-md"
+          class="w-full"
         />
 
         <h3 class="text-2xl font-bold">

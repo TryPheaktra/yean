@@ -2,9 +2,7 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-// const drawerVisible = ref(false)
 const { t } = useI18n({ useScope: 'global' })
-
 
 const navItems = computed(() => [
   { label: t('about.b'), to: '#home' }
@@ -50,9 +48,10 @@ onUnmounted(() => {
 
 <template>
   <section
-    class="relative overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-500 py-20 px-6"
+    id="home"
+    class="relative overflow-hidden bg-gradient-to-r from-yellow-400 to-yellow-500 py-20 px-6"
   >
-    <!-- Background Blur Circle -->
+    <!-- Decorative Background -->
     <div class="absolute -top-20 -left-20 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
     <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
 
@@ -68,15 +67,15 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- Content Card -->
-      <div class="backdrop-blur-lg bg-white/20 border border-white/30 shadow-2xl rounded-3xl p-10 space-y-14">
+      <!-- Glass Card -->
+      <div class="backdrop-blur-lg bg-white/20 border border-white/30 shadow-2xl rounded-3xl p-10 space-y-16">
 
         <!-- Travel Anywhere -->
         <div>
           <h2 class="text-3xl font-bold text-white mb-4">
             {{ t('about.ta') }}
           </h2>
-          <p class="text-white/90 leading-relaxed text-lg">
+          <p class="text-white/90 text-lg leading-relaxed">
             {{ t('about.a2') }}
           </p>
         </div>
@@ -88,27 +87,43 @@ onUnmounted(() => {
           </h2>
 
           <ul class="grid md:grid-cols-2 gap-6">
-            <li class="flex items-center gap-3 text-white/95 text-lg">
+            <li
+              v-for="key in ['w1','w2','w3','w4','w5']"
+              :key="key"
+              class="flex items-center gap-3 text-white text-lg"
+            >
               <span class="bg-white text-yellow-600 p-2 rounded-full shadow-md">✔</span>
-              {{ t('about.wte.w1') }}
-            </li>
-            <li class="flex items-center gap-3 text-white/95 text-lg">
-              <span class="bg-white text-yellow-600 p-2 rounded-full shadow-md">✔</span>
-              {{ t('about.wte.w2') }}
-            </li>
-            <li class="flex items-center gap-3 text-white/95 text-lg">
-              <span class="bg-white text-yellow-600 p-2 rounded-full shadow-md">✔</span>
-              {{ t('about.wte.w3') }}
-            </li>
-            <li class="flex items-center gap-3 text-white/95 text-lg">
-              <span class="bg-white text-yellow-600 p-2 rounded-full shadow-md">✔</span>
-              {{ t('about.wte.w4') }}
-            </li>
-            <li class="flex items-center gap-3 text-white/95 text-lg">
-              <span class="bg-white text-yellow-600 p-2 rounded-full shadow-md">✔</span>
-              {{ t('about.wte.w5') }}
+              {{ t(`about.wte.${key}`) }}
             </li>
           </ul>
+        </div>
+
+        <!-- Car Interior Section -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+          <!-- Image -->
+          <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/src/assets/incar.jpg"
+              alt="Car Interior"
+              preview
+              imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
+              class="w-full"
+            />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition pointer-events-none"></div>
+          </div>
+
+          <!-- Image -->
+          <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/src/assets/incar1.jpg"
+              alt="Car Interior"
+              preview
+              imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
+              class="w-full"
+            />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition pointer-events-none"></div>
+          </div>
         </div>
 
         <!-- Airport Pickups -->
@@ -128,33 +143,18 @@ onUnmounted(() => {
             {{ t('about.let') }}
           </p>
 
-          <!-- Beautiful CTA Button -->
           <a
             v-for="item in navItems"
             :key="item.label"
             :href="item.to"
             @click.prevent="scrollToSection(item.to)"
-            class="inline-block px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            class="inline-block px-10 py-4 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg"
             :class="isActive(item.to)
               ? 'bg-yellow-500 text-white'
               : 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white hover:shadow-2xl'"
           >
             🚗 {{ item.label }}
           </a>
-
-          <!-- <div class="pt-6 border-t text-gray-600">
-            <p class="font-semibold mb-2">
-              Send a message to book a car or ask about our rates.
-            </p>
-
-            <a
-              href="https://t.me/+85511944244"
-              target="_blank"
-              class="text-blue-600 font-bold text-lg hover:underline"
-            >
-              Telegram / WhatsApp: +855 11 944 244
-            </a>
-          </div> -->
 
         </div>
 
