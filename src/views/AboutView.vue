@@ -2,8 +2,8 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Image from 'primevue/image'
-import incar from '@/assets/incar.jpg'
-import incar1 from '@/assets/incar1.jpg'
+import incar from '../assets/incar.jpg'
+import incar1 from '../assets/incar1.jpg'
 
 
 const { t } = useI18n({ useScope: 'global' })
