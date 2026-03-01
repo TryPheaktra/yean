@@ -140,6 +140,9 @@ const prevSlide = () => {
 //   if (!date) return 'Not selected';
 //   return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 // };
+
+  // Phone validation: 9 or 10 digits only
+const isValidPhone = computed(() => /^[0-9]{9,10}$/.test(phone.value))
 const handleSubmit = async () => {
   if (isSubmitting.value) return
   // ✅ Validation: Check required fields
@@ -192,6 +195,16 @@ const handleSubmit = async () => {
     return;
   }
 
+  if (!isValidPhone.value) {
+    toast.add({
+      severity: 'warn',
+      summary: 'Invalid Phone',
+      detail: 'Phone number must be 9 or 10 digits',
+      life: 3000
+    })
+    return
+  }
+
   // if (!pickupLocation.value.trim()) {
   //   toast.add({ 
   //     severity: 'warn', 
@@ -216,7 +229,8 @@ const handleSubmit = async () => {
     });
   };
 
-  const formattedPhone = '+855' + phone.value.replace(/\s/g, '')
+  // const formattedPhone = '+855' + phone.value.replace(/\s/g, '')
+
     // -----------------------------
   // 3️⃣ Build payload
   // -----------------------------
@@ -224,7 +238,7 @@ const handleSubmit = async () => {
     token: turnstileToken.value,
     username: username.value,
     hotelname: hotelname.value,
-    phone: formattedPhone,
+    phone: phone,
     selectedCarType: selectedCarType.value || '',
     pickupDate: pickupDate.value ? formatDate(pickupDate.value) : '',
     pickupTime: templatedisplay.value ? formatTime(templatedisplay.value) : ''
@@ -500,14 +514,21 @@ onMounted(() => {
                 <div class="form-field">
                   <InputGroup>
                     <InputGroupAddon class="bg-slate-200! w-35 addon-animated">
-                      <i class="pi pi-phone text-black"> +855</i>
+                      <i class="pi pi-phone text-black"> Phone</i>
                     </InputGroupAddon>
-                    <InputMask 
-                      ref="pickupInput"
-                      v-model="phone" 
-                      mask="99 999 999" placeholder="(+855) 999-9999" fluid
+                    <InputText
+                      v-model="phone"
+                      inputmode="numeric"
+                      maxlength="10"
+                      placeholder="Enter 9 or 10 digit phone"
+                      class="w-full"
+                      :class="!isValidPhone && phone ? 'p-invalid' : ''"
+                      @input="phone = phone.replace(/[^0-9]/g, '')"
                     />
                   </InputGroup>
+                  <small v-if="!isValidPhone && phone" class="text-red-500">
+                    Phone number must be 9 or 10 digits
+                  </small>
                 </div>
 
                 <!-- Different Drop-off Toggle -->
