@@ -2,6 +2,9 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Image from 'primevue/image'
+import incar from '@/assets/incar.jpg'
+import incar1 from '@/assets/incar1.jpg'
+
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -105,7 +108,7 @@ onUnmounted(() => {
           <!-- Image -->
           <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/public/incar.jpg"
+              :src="incar"
               alt="Car Interior"
               preview
               imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
@@ -117,7 +120,7 @@ onUnmounted(() => {
           <!-- Image -->
           <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/public/incar1.jpg"
+              :src="incar1"
               alt="Car Interior"
               preview
               imageClass="w-full h-80 object-cover transition duration-500 group-hover:scale-110"
